@@ -51,3 +51,35 @@ flowchart LR
 README не должен утверждать больше, чем подтверждают код, тесты и сохранённые артефакты. Для рыночных/экономических проектов backtest или внутренняя переоценка не равны реализованной внешней прибыли; для AI/infra проектов benchmark или диаграмма не равны production-надежности.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+
+---
+
+# ⚛️ Глубокий доказательный паспорт Quantum Trading
+
+## Реальность `main`
+
+Legacy R&D prototype: `main.py`, `requirements.txt`, README и LICENSE. Нет benchmark/evidence suite.
+
+## Главный scientific question
+
+Нужно доказать не то, что Qiskit можно вызвать из trading pipeline, а что quantum component даёт измеримое улучшение против matched classical baseline при одинаковых данных и compute budget.
+
+```mermaid
+flowchart LR
+    DATA[Market data] --> ENC[Quantum/classical encoding]
+    ENC --> Q[Quantum model]
+    ENC --> C[Matched classical baseline]
+    Q --> COMP[Same OOS protocol]
+    C --> COMP
+```
+
+## Promotion gate
+
+- exact circuit/backend;
+- simulator vs real quantum hardware clearly separated;
+- classical baseline;
+- repeated seeds/shots;
+- time-series OOS;
+- costs if trading benefit claimed.
+
+Пока статус корректно — **LEGACY QUANTUM TRADING EXPERIMENT**.
